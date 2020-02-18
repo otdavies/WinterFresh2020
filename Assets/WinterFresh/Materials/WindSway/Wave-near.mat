@@ -171,7 +171,7 @@ Material:
     - _HeightAmplitude: 0.02
     - _HeightCenter: 0.5
     - _HeightCutoff: -10
-    - _HeightFactor: 2.2
+    - _HeightFactor: 2.3
     - _HeightMapParametrization: 0
     - _HeightMax: 1
     - _HeightMin: -1
@@ -187,7 +187,7 @@ Material:
     - _MaterialID: 1
     - _Metallic: 0
     - _NoiseAmp: 0.01
-    - _NoiseSpeed: 1
+    - _NoiseSpeed: 1.2
     - _NormalMapSpace: 0
     - _NormalScale: 1
     - _PPDLodThreshold: 5

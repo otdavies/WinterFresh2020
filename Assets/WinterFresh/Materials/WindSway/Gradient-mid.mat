@@ -170,7 +170,7 @@ Material:
     - _EnableFogOnTransparent: 1
     - _EnableGeometricSpecularAA: 0
     - _EnergyConservingSpecularColor: 1
-    - _FadePixelFalloff: 0.0015
+    - _FadePixelFalloff: 0.0012
     - _HdrpVersion: 2
     - _HeightAmplitude: 0.02
     - _HeightCenter: 0.5
@@ -246,8 +246,8 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 0.14150941, g: 0.14150941, b: 0.14150941, a: 1}
-    - _ColorBottom: {r: 0.084905684, g: 0.084905684, b: 0.084905684, a: 1}
-    - _ColorTop: {r: 0.4433962, g: 0.4201013, b: 0.40784085, a: 1}
+    - _ColorBottom: {r: 0, g: 0, b: 0, a: 1}
+    - _ColorTop: {r: 0.5566038, g: 0.5443515, b: 0.53822535, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}

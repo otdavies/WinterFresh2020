@@ -171,7 +171,7 @@ Material:
     - _HeightAmplitude: 0.02
     - _HeightCenter: 0.5
     - _HeightCutoff: -10
-    - _HeightFactor: 2.6
+    - _HeightFactor: 2.7
     - _HeightMapParametrization: 0
     - _HeightMax: 1
     - _HeightMin: -1

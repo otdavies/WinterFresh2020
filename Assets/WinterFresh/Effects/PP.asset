@@ -1,5 +1,44 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8981469676379590480
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b24b200358312b4fa1004e2431c2f1f, type: 3}
+  m_Name: ShadowsMidtonesHighlights
+  m_EditorClassIdentifier: 
+  active: 0
+  m_AdvancedMode: 0
+  shadows:
+    m_OverrideState: 1
+    m_Value: {x: 0.99191165, y: 1, z: 0.8127795, w: 0}
+  midtones:
+    m_OverrideState: 1
+    m_Value: {x: 0.07753658, y: 0.5718602, z: 1, w: 0}
+  highlights:
+    m_OverrideState: 1
+    m_Value: {x: 0.8270381, y: 1, z: 0.44104624, w: 0}
+  shadowsStart:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+  shadowsEnd:
+    m_OverrideState: 0
+    m_Value: 0.3
+    min: 0
+  highlightsStart:
+    m_OverrideState: 0
+    m_Value: 0.55
+    min: 0
+  highlightsEnd:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
 --- !u!114 &-6219375788285767046
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -68,8 +107,8 @@ MonoBehaviour:
   active: 0
   m_AdvancedMode: 0
   intensity:
-    m_OverrideState: 0
-    m_Value: -0.054
+    m_OverrideState: 1
+    m_Value: 0
     min: -1
     max: 1
   xMultiplier:
@@ -137,6 +176,32 @@ MonoBehaviour:
   - {fileID: 7549710439060464414}
   - {fileID: -5721988629049421141}
   - {fileID: -4937387368573503561}
+  - {fileID: 2288848411039420437}
+  - {fileID: -8981469676379590480}
+--- !u!114 &2288848411039420437
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b51a78e223a2e504bb88a059b55229ea, type: 3}
+  m_Name: WhiteBalance
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  temperature:
+    m_OverrideState: 1
+    m_Value: 100
+    min: -100
+    max: 100
+  tint:
+    m_OverrideState: 1
+    m_Value: 0
+    min: -100
+    max: 100
 --- !u!114 &7549710439060464414
 MonoBehaviour:
   m_ObjectHideFlags: 3
