@@ -7,16 +7,17 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: InnerRing
-  m_Shader: {fileID: -6465566751694194690, guid: 28b4d4cb5f5e00346826a15c82f85ebb,
+  m_Name: OuterRing
+  m_Shader: {fileID: -6465566751694194690, guid: 1c0c6aecbe8ccb7469160606ab5ff7bc,
     type: 3}
-  m_ShaderKeywords: _BLENDMODE_ALPHA _SURFACE_TYPE_TRANSPARENT
+  m_ShaderKeywords: _BLENDMODE_ADD _SURFACE_TYPE_TRANSPARENT
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3000
   stringTagMap:
     MotionVector: User
+    RenderType: Transparent
   disabledShaderPasses:
   - MOTIONVECTORS
   - TransparentBackface
@@ -83,6 +84,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_53A59F6D_Texture_1:
+        m_Texture: {fileID: 2800000, guid: f119893d5bca52f4dab3b3373335fdac, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_BE8BC58_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 9284627ef216e9f4c92c086acf77f40e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecularColorMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -108,6 +117,12 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_6D1DE4B5: 10
+    - Vector1_72F913D4: 0
+    - Vector1_7A50DA2: 0.3
+    - Vector1_87F97D3: 0
+    - Vector1_AF80F7E: 1
+    - Vector1_E95D7DE1: 0.75
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
@@ -118,10 +133,10 @@ Material:
     - _AlphaCutoffPostpass: 0.5
     - _AlphaCutoffPrepass: 0.5
     - _AlphaCutoffShadow: 0.5
-    - _AlphaDstBlend: 10
+    - _AlphaDstBlend: 1
     - _AlphaSrcBlend: 1
     - _Anisotropy: 0
-    - _BlendMode: 0
+    - _BlendMode: 1
     - _CoatMask: 0
     - _CullMode: 2
     - _CullModeForward: 2
@@ -151,7 +166,7 @@ Material:
     - _DistortionVectorScale: 2
     - _DoubleSidedEnable: 0
     - _DoubleSidedNormalMode: 1
-    - _DstBlend: 10
+    - _DstBlend: 1
     - _EmissiveColorMode: 1
     - _EmissiveExposureWeight: 1
     - _EmissiveIntensity: 1
@@ -224,11 +239,11 @@ Material:
     - _UVEmissive: 0
     - _UseEmissiveIntensity: 0
     - _UseShadowThreshold: 0
-    - _ZTestDepthEqualForOpaque: 2
+    - _ZTestDepthEqualForOpaque: 0
     - _ZTestGBuffer: 4
     - _ZTestModeDistortion: 8
-    - _ZTestTransparent: 2
-    - _ZWrite: 1
+    - _ZTestTransparent: 0
+    - _ZWrite: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
