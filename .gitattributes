@@ -48,5 +48,10 @@
 *.[hH][iI][pP][lL][cC] filter=lfs diff=lfs merge=lfs -text
 *.[hH][dD][aA] filter=lfs diff=lfs merge=lfs -text
 *.[hH][dD][aA][lL][cC] filter=lfs diff=lfs merge=lfs -text
+
+# Images folder ignore
+References/*.png -filter=lfs -diff=lfs -merge=lfs -text
+References/*.gif -filter=lfs -diff=lfs -merge=lfs -text
+References/*.jpg -filter=lfs -diff=lfs -merge=lfs -text
 # Misc
 *.[dD][lL][lL] filter=lfs diff=lfs merge=lfs -text
