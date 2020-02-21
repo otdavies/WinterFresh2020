@@ -108,6 +108,7 @@ namespace Klak.Spout
 
         void Update()
         {
+            Application.targetFrameRate = 60;
             // Update the plugin internal state.
             if (_plugin != System.IntPtr.Zero)
                 Util.IssuePluginEvent(PluginEntry.Event.Update, _plugin);
