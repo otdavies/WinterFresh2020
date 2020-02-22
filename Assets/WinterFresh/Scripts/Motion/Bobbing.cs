@@ -13,7 +13,7 @@ public class Bobbing : MonoBehaviour
 
     private void OnEnable()
     {
-        basePosition = transform.position;
+        basePosition = transform.localPosition;
         baseUp = transform.up;
     }
 
@@ -28,8 +28,8 @@ public class Bobbing : MonoBehaviour
         float positionSine = (smallSine + mediumSine + largeSine) * 0.333f;
         float rotationSine = (slowSine + mediumSine - largeSine) * 0.333f;
 
-        transform.position = basePosition - Vector3.up * positionSine * verticalShiftAmount;
+        transform.localPosition = basePosition - Vector3.up * positionSine * verticalShiftAmount;
         // transform.up = baseUp + Vector3.right * (rotationSine + slowSine * 0.1f) * rotationShiftAmount + Vector3.forward * (rotationSine + slowSine * 0.15777f) * rotationShiftAmount;
-        transform.Rotate((smallSine - mediumSine) * rotationShiftAmount, 0, (smallSine - largeSine) * rotationShiftAmount);
+        transform.Rotate((smallSine - mediumSine) * rotationShiftAmount, 0, (smallSine - largeSine) * rotationShiftAmount, Space.Self);
     }
 }

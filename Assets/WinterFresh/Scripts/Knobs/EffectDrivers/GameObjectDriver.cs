@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameObjectDriver : Observer<int[]>
+public class GameObjectDriver : Observer<NetworkIntMessage>
 {
     public GameObject observerable;
     public int knobId;
@@ -14,7 +14,7 @@ public class GameObjectDriver : Observer<int[]>
 
     private void Start()
     {
-        RegisterWith(observerable.GetComponent<Observable<int[]>>());
+        RegisterWith(observerable.GetComponent<Observable<NetworkIntMessage>>());
         _material = GetComponent<MeshRenderer>().material;
     }
 
@@ -24,8 +24,11 @@ public class GameObjectDriver : Observer<int[]>
         _material.SetColor("_BaseColor", Color.Lerp(originalColor, _colorTarget, Time.deltaTime * blendTime));
     }
 
-    public override void Observed(ref int[] val)
+    public override void Observed(ref NetworkIntMessage msg)
     {
-        _colorTarget = Color.Lerp(A, B, val[knobId] / 64f);
+        if(msg.MsgType == NetworkIntMessage.MessageType.KNOBS) 
+        {
+            _colorTarget = Color.Lerp(A, B, msg.data[knobId] / 64f);
+        } 
     }
 }
