@@ -4,6 +4,11 @@ using UnityEngine;
 
 public abstract class Observer<T> : MonoBehaviour
 {
+    protected void Awake() 
+    {
+        RegisterWith(FindObjectOfType<Observable<T>>());
+    }
+
     protected void RegisterWith(Observable<T> observable)
     {
         observable.Register(this);

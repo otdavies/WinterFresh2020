@@ -19,8 +19,11 @@ public class BeamSuckedObject : MonoBehaviour
         _controlPoints = new Vector3[4];
         _controlPoints[0] = transform.position;
         _controlPoints[1] = transform.position + transform.up;
-        _controlPoints[2] = suckTarget.position + suckTarget.up;
-        _controlPoints[3] = suckTarget.position;
+        if(suckTarget) 
+        {
+            _controlPoints[2] = suckTarget.position + suckTarget.up;
+            _controlPoints[3] = suckTarget.position;
+        }
 
         _originalScale = transform.localScale;
 
@@ -48,9 +51,12 @@ public class BeamSuckedObject : MonoBehaviour
         {
             t += step;
             float tt = t*t*t * (t * (6f*t - 15f) + 10f);
-            _controlPoints[2] = suckTarget.position + suckTarget.up * suckTargetStrength;
-            _controlPoints[3] = suckTarget.position;
-            _path.ControlPoints = _controlPoints;
+            if(suckTarget) 
+            {
+                _controlPoints[2] = suckTarget.position + suckTarget.up * suckTargetStrength;
+                _controlPoints[3] = suckTarget.position;
+                _path.ControlPoints = _controlPoints;
+            }
 
             Vector3 pos, dir;
             _path.GetOrientationOnPath(tt, out pos, out dir);

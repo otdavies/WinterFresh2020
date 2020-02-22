@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GameObjectDriver : Observer<NetworkIntMessage>
 {
-    public GameObject observerable;
     public int knobId;
     public Color A;
     public Color B;
@@ -14,7 +13,6 @@ public class GameObjectDriver : Observer<NetworkIntMessage>
 
     private void Start()
     {
-        RegisterWith(observerable.GetComponent<Observable<NetworkIntMessage>>());
         _material = GetComponent<MeshRenderer>().material;
     }
 

@@ -123,6 +123,10 @@ Material:
     - Vector1_87F97D3: 0
     - Vector1_AF80F7E: 1
     - Vector1_E95D7DE1: 0.75
+    - WarpBlur: 0.015625004
+    - WarpOffset: 0
+    - WarpSpeed: 0.3
+    - WarpStrength: 1
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1

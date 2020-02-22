@@ -124,6 +124,7 @@ Material:
     m_Floats:
     - BeamState: 0
     - Vector1_3A10181: 1
+    - WarpStrength: 0
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
