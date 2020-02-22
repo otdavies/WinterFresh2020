@@ -8,6 +8,7 @@ public class BeamSuckedObject : MonoBehaviour
     public float suckTime = 3;
     public float suckTargetStrength;
     public float scaleBulgeStrength = 0.3f;
+    public bool destroyWhenDone = false;
     private BezierPath _path;
     private MeshRenderer _renderer;
     private Vector3[] _controlPoints; 
@@ -63,11 +64,11 @@ public class BeamSuckedObject : MonoBehaviour
 
             transform.position = pos;
             transform.up = dir;
-            transform.localScale = _originalScale + Lerp3(Vector3.zero, Vector3.one, Vector3.zero, (tt * 2 - 1)) * scaleBulgeStrength;
+            transform.localScale = _originalScale + Lerp3(Vector3.zero, Vector3.one * scaleBulgeStrength, -Vector3.one, (tt * 2 - 1));
 
             yield return new WaitForEndOfFrame();
         }
-        Respawn(_controlPoints[1], _controlPoints[1] - _controlPoints[0]);
+        if (destroyWhenDone) Destroy(this.gameObject);
     }
 
     private Vector3 Lerp3(Vector3 A, Vector3 B, Vector3 C, float t)

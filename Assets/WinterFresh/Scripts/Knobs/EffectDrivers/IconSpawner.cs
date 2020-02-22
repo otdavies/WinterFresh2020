@@ -10,10 +10,11 @@ public class IconSpawner : Observer<NetworkIntMessage>
 
     public GameObject iconCarrier;
 
-    public Texture[][] knobs;
+    public Texture2D[] icons;
 
     public bool activated = false;
 
+    private int lastSpawned = 0;
 
     public override void Observed(ref NetworkIntMessage msg)
     {
@@ -24,13 +25,23 @@ public class IconSpawner : Observer<NetworkIntMessage>
 
         if(msg.MsgType == NetworkIntMessage.MessageType.KNOBS)
         {
+            if (!activated) return;
+
             int knobId = msg.data[1];
             int knobVal = msg.data[2];
-            //Texture t = knobs[knobId][knobVal/16];
+            int spawnID = ((knobId * 5) + ((knobVal + 1) / 3) - 1);
 
-           GameObject g = GameObject.Instantiate(iconCarrier, spawnPoints[knobId].position, Quaternion.identity);
-           //g.GetComponent<MeshRenderer>().material.SetTexture("_UnlitColorMap", t);
-           g.GetComponent<BeamSuckedObject>().suckTarget = suckTarget;
+            if (spawnID != lastSpawned)
+            {
+                lastSpawned = spawnID;
+                GameObject g = GameObject.Instantiate(iconCarrier, spawnPoints[knobId].position, Quaternion.identity);
+                g.GetComponent<BeamSuckedObject>().suckTarget = suckTarget;
+                Material mat = g.GetComponentInChildren<MeshRenderer>().material;
+
+                Texture2D t = icons[spawnID];
+                mat.SetTexture("_UnlitColorMap", t);
+                mat.SetTexture("_EmissiveColorMap", t);
+            }
         }
     }
 }
