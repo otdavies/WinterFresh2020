@@ -48,7 +48,7 @@ public class MaterialPropertyDriver : Observer<NetworkIntMessage>
             {
                 if(me.knobId == msg.data[1])
                 {
-                    me.targetValue = msg.data[2]/16f;
+                    me.targetValue = msg.data[2]/14f;
                 }
             }
         }

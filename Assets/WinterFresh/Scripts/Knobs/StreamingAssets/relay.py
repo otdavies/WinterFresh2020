@@ -15,8 +15,20 @@ async def relay(websocket, path):
     except Exception as e:
         print("Connection failed")
         print(e)
+		
+		
+def send_test(msg):
+	sock.sendto(msg.encode(), (UDP_IP, UDP_PORT))
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) # UDP
+
+send_test("S, 1")
+send_test("C, 2")
+send_test("K, 0, 0")
+send_test("K, 1, 2")
+send_test("K, 2, 0")
+send_test("K, 3, 3")
+
 start_server = websockets.serve(relay, "0.0.0.0", 6969)
 asyncio.get_event_loop().run_until_complete(start_server)
 asyncio.get_event_loop().run_forever() 

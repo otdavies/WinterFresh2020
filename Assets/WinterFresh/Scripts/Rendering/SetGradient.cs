@@ -18,6 +18,7 @@ public class SetGradient : MonoBehaviour
         _gradientTextureA = new Texture2D(gradientRes, 1);
         _gradientTextureB = new Texture2D(gradientRes, 1);
         _material = GetComponent<MeshRenderer>().sharedMaterial;
+
         UpdateGradientTexture("_GradientA", gradientA, _gradientTextureA);
         UpdateGradientTexture("_GradientB", gradientB, _gradientTextureB);
     }
@@ -31,11 +32,5 @@ public class SetGradient : MonoBehaviour
         }
         _gradientTexture.Apply();
         _material.SetTexture(gradientName, _gradientTexture);
-    }
-
-    private void OnValidate() 
-    {
-        UpdateGradientTexture("_GradientA", gradientA, _gradientTextureA);
-        UpdateGradientTexture("_GradientB", gradientB, _gradientTextureB);
     }
 }

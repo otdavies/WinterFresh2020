@@ -143,14 +143,14 @@ MonoBehaviour:
   - material: {fileID: 2100000, guid: 60e8dac472b18474291702a926b14392, type: 2}
     propertyName: UserBrightness
     knobId: 3
-    bottomOfRange: 0.01
-    topOfRange: 0.4
+    bottomOfRange: 1
+    topOfRange: 64
     smoothedValue: 0
     targetValue: 0
   - material: {fileID: 2100000, guid: 60e8dac472b18474291702a926b14392, type: 2}
     propertyName: UserCellStrength
     knobId: 3
-    bottomOfRange: -1.5
+    bottomOfRange: -1
     topOfRange: 6
     smoothedValue: 0
     targetValue: 0
@@ -6459,7 +6459,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 8400000, guid: d22b4bd30b87378428fea14d6daf69ba, type: 2}
+  m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
@@ -7708,12 +7708,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1393545957}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45099d624c1e6c14e9514f4e5ea1ed9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sourceTexture: {fileID: 8400000, guid: d22b4bd30b87378428fea14d6daf69ba, type: 2}
+  _sourceTexture: {fileID: 0}
   _alphaSupport: 0
 --- !u!95 &1393545960
 Animator:
@@ -7744,7 +7744,7 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: b317b22c011f04c41a2f50a53563e5e2, type: 2}
-  m_InitialState: 0
+  m_InitialState: 1
   m_WrapMode: 0
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
@@ -13212,14 +13212,14 @@ MonoBehaviour:
   - material: {fileID: 2100000, guid: a67e60009ebc23e42891f1b1495960f9, type: 2}
     propertyName: WarpStrength
     knobId: 0
-    bottomOfRange: 0
-    topOfRange: 1
+    bottomOfRange: 0.2
+    topOfRange: 0.8
     smoothedValue: 0
     targetValue: 0
   - material: {fileID: 2100000, guid: a67e60009ebc23e42891f1b1495960f9, type: 2}
     propertyName: UserHue
     knobId: 0
-    bottomOfRange: 0
+    bottomOfRange: 0.1
     topOfRange: 1
     smoothedValue: 0
     targetValue: 0

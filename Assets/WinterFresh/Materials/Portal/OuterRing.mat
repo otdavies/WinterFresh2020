@@ -117,14 +117,14 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - UserWarpBlur: 0
+    - UserWarpBlur: 0.14285713
     - Vector1_6D1DE4B5: 10
     - Vector1_72F913D4: 0
     - Vector1_7A50DA2: 0.3
     - Vector1_87F97D3: 0
     - Vector1_AF80F7E: 1
     - Vector1_E95D7DE1: 0.75
-    - WarpBlur: 0.3750001
+    - WarpBlur: 0
     - WarpOffset: 0
     - WarpSpeed: 0.3
     - WarpStrength: 1
