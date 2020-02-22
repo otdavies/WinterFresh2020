@@ -131,6 +131,8 @@ Material:
     - FringeBrightness: 50
     - PatternFalloff: 2
     - RotationSpeed: 1
+    - UserBrightness: 0.009999999
+    - UserCellStrength: -1.4999999
     - Vector1_23D15BE6: 2
     - Vector1_82D51FBB: 1
     - Vector1_A701D17E: 8
@@ -261,7 +263,7 @@ Material:
     - _ZWrite: 0
     m_Colors:
     - Color_C759416: {r: 0, g: 0.91906536, b: 1, a: 1}
-    - EffectColor: {r: 0.3308412, g: 0.075649686, b: 0.6415094, a: 1}
+    - EffectColor: {r: 0.43772003, g: 0.4528302, b: 0.044855822, a: 1}
     - EffectColor1: {r: 1, g: 0, b: 0.85642624, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}

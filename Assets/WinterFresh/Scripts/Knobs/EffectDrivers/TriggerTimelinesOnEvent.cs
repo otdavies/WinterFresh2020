@@ -9,6 +9,7 @@ public class TriggerTimelinesOnEvent : Observer<NetworkIntMessage>
 
     [Header("Effect Color controls")]
     public Color[] colors;
+    public Texture[] textures;
     public Material[] materials;
  
     // Use this for initialization
@@ -40,8 +41,10 @@ public class TriggerTimelinesOnEvent : Observer<NetworkIntMessage>
         if(msg.MsgType == NetworkIntMessage.MessageType.COLOR)
         {
             Color c = colors[msg.data[1]];
+            Texture t = textures[msg.data[1]];
             for(int i = 0; i < materials.Length; i++)
             {
+                materials[i].SetTexture("EdgeTex", t);
                 materials[i].SetColor("EffectColor", c);
             }
         }

@@ -6,9 +6,6 @@ using System;
 public class MaterialPropertyDriver : Observer<NetworkIntMessage>
 {    
     public MaterialElement[] targetProperties;
-    public int knobId = 0;
-
-    private float _targetValue = 0;
 
     private bool _activated = false;
 
@@ -17,16 +14,21 @@ public class MaterialPropertyDriver : Observer<NetworkIntMessage>
     {
         public Material material;
         public string propertyName;
+        public int knobId = 0;
         public float bottomOfRange;
         public float topOfRange;
+        [HideInInspector]
         public float smoothedValue;
+        [HideInInspector]
+        public float targetValue;
+
     }
 
     private void Update() 
     {
         foreach(MaterialElement me in targetProperties)
         {
-            me.smoothedValue = Mathf.Lerp(me.smoothedValue, me.bottomOfRange + (_targetValue * me.topOfRange), Time.deltaTime * 10);
+            me.smoothedValue = Mathf.Lerp(me.smoothedValue, Mathf.Lerp(me.bottomOfRange, me.topOfRange, me.targetValue), Time.deltaTime * 6);
             me.material.SetFloat(me.propertyName, me.smoothedValue);
         }
     }
@@ -42,9 +44,12 @@ public class MaterialPropertyDriver : Observer<NetworkIntMessage>
 
         if(msg.MsgType == NetworkIntMessage.MessageType.KNOBS)
         {
-            if(knobId == msg.data[1])
+            foreach(MaterialElement me in targetProperties)
             {
-                _targetValue = msg.data[2]/64f;
+                if(me.knobId == msg.data[1])
+                {
+                    me.targetValue = msg.data[2]/16f;
+                }
             }
         }
     }
