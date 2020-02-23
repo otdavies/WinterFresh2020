@@ -51,7 +51,7 @@ public class BeamSuckedObject : MonoBehaviour
         while(t <= 1)
         {
             t += step;
-            float tt = t*t*t * (t * (6f*t - 15f) + 10f);
+            float tt = t*t * (3f - 2f*t);
             if(suckTarget) 
             {
                 _controlPoints[2] = suckTarget.position + suckTarget.up * suckTargetStrength;

@@ -124,8 +124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   suckTarget: {fileID: 0}
-  suckTime: 5
-  suckTargetStrength: 7
+  suckTime: 3
+  suckTargetStrength: 5
   scaleBulgeStrength: -0.3
   destroyWhenDone: 1
 --- !u!1 &8327609178847256350
@@ -155,7 +155,7 @@ Transform:
   m_GameObject: {fileID: 8327609178847256350}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 2.4, y: 2.4, z: 2.4}
   m_Children:
   - {fileID: 643728071}
   m_Father: {fileID: 8327609177955978072}

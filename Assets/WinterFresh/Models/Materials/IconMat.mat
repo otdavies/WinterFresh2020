@@ -191,7 +191,7 @@ Material:
     - _DstBlend: 10
     - _EmissionEnabled: 0
     - _EmissiveColorMode: 1
-    - _EmissiveExposureWeight: 0.489
+    - _EmissiveExposureWeight: 0.577
     - _EmissiveIntensity: 2
     - _EmissiveIntensityUnit: 0
     - _EnableBlendModePreserveSpecularLighting: 1
@@ -276,13 +276,13 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
-    - _Color: {r: 0, g: 0.30973357, b: 0.509434, a: 2}
+    - _Color: {r: 0.1804913, g: 0.18435715, b: 0.9811321, a: 2}
     - _ColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissiveColor: {r: 0, g: 0.30973357, b: 0.509434, a: 2}
-    - _EmissiveColorLDR: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissiveColor: {r: 0.1804913, g: 0.18435715, b: 0.9811321, a: 2}
+    - _EmissiveColorLDR: {r: 0.24719654, g: 0.37623033, b: 0.9528302, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}

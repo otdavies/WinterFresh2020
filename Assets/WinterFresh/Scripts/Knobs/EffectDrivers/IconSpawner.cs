@@ -29,10 +29,14 @@ public class IconSpawner : Observer<NetworkIntMessage>
 
             int knobId = msg.data[1];
             int knobVal = msg.data[2];
-            int spawnID = ((knobId * 5) + ((knobVal + 1) / 3) - 1);
+            
+            int correctedID = Mathf.RoundToInt(Mathf.Lerp(0, 4, 1 - (knobVal / 14f)));
+            
+            int spawnID = (knobId * 5) + correctedID;
 
             if (spawnID != lastSpawned)
             {
+                Debug.Log(spawnID);
                 lastSpawned = spawnID;
                 GameObject g = GameObject.Instantiate(iconCarrier, spawnPoints[knobId].position, Quaternion.identity);
                 g.GetComponent<BeamSuckedObject>().suckTarget = suckTarget;

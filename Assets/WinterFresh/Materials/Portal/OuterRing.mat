@@ -117,7 +117,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - UserWarpBlur: 0.99999976
+    - UserWarpBlur: 6e-45
     - Vector1_6D1DE4B5: 10
     - Vector1_72F913D4: 0
     - Vector1_7A50DA2: 0.3
